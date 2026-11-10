@@ -1,0 +1,10 @@
+# Dados de satélite (vários GB): baixe da NASA Earthdata, veja o README
+*.nc
+*.raw
+*.hdr
+*.tif
+dados/
+saida/
+__pycache__/
+*.pyc
+.venv/
