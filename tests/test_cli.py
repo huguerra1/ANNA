@@ -7,14 +7,14 @@ import subprocess
 import sys
 import unittest
 
-from codecraft.__main__ import criar_parser, main
+from anna.__main__ import criar_parser, main
 from tests.temporarios import diretorio_temporario
 
 
 class TestCLI(unittest.TestCase):
     def test_ajuda_anomalias_mostra_opcoes_do_treino(self):
         resultado = subprocess.run(
-            [sys.executable, "-m", "codecraft", "anomalias", "--help"],
+            [sys.executable, "-m", "anna", "anomalias", "--help"],
             capture_output=True, text=True,
             cwd=Path(__file__).resolve().parents[1],
         )
@@ -56,11 +56,11 @@ class BloquearTensorFlow(importlib.abc.MetaPathFinder):
         if fullname.split('.')[0] == 'tensorflow':
             raise AssertionError('TensorFlow não deve ser importado neste teste')
 sys.meta_path.insert(0, BloquearTensorFlow())
-import codecraft.anomalias
-import codecraft.conversao
-import codecraft.rgb
-import codecraft.refinamento
-from codecraft.__main__ import main
+import anna.anomalias
+import anna.conversao
+import anna.rgb
+import anna.refinamento
+from anna.__main__ import main
 main(['--help'])
 """
         resultado = subprocess.run(

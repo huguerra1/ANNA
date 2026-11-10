@@ -8,7 +8,7 @@ import unittest
 import numpy as np
 import xarray as xr
 
-from codecraft.conversao import converter_emit_para_envi, montar_cabecalho_envi
+from anna.conversao import converter_emit_para_envi, montar_cabecalho_envi
 from tests.temporarios import diretorio_temporario
 
 

@@ -1,4 +1,4 @@
-"""Interface de linha de comando: python -m codecraft."""
+"""Interface de linha de comando: python -m anna."""
 
 import argparse
 import sys
@@ -19,7 +19,9 @@ def semente_valida(valor):
 
 
 def criar_parser():
-    parser = argparse.ArgumentParser(description="Detecção de anomalias ambientais em imagens NASA EMIT.")
+    parser = argparse.ArgumentParser(
+        prog="python -m anna", description="ANNA: detecção de anomalias ambientais em imagens NASA EMIT."
+    )
     comandos = parser.add_subparsers(dest="comando", required=True)
 
     converter = comandos.add_parser("converter", help="Converter NetCDF EMIT L2A para ENVI BSQ.")

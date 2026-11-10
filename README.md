@@ -1,6 +1,6 @@
-# CodeCraft — Anomalias ambientais em imagens hiperespectrais da NASA
+# ANNA — Anomalias ambientais em imagens hiperespectrais da NASA
 
-[![CI](https://github.com/huguerra1/codecraft/actions/workflows/ci.yml/badge.svg)](https://github.com/huguerra1/codecraft/actions/workflows/ci.yml)
+[![CI](https://github.com/huguerra1/ANNA/actions/workflows/ci.yml/badge.svg)](https://github.com/huguerra1/ANNA/actions/workflows/ci.yml)
 
 Projeto desenvolvido em equipe num hackathon (outubro de 2025). Ele detecta **anomalias ambientais**,
 como áreas de mineração e solo exposto, em imagens do espectrômetro **NASA EMIT**, instalado na
@@ -57,14 +57,14 @@ gratuita. Pegue uma cena sobre a área preservada e outra sobre a área a analis
 ### Pipeline
 
 ```bash
-python -m codecraft converter dados/emas.nc saida/emas
-python -m codecraft converter dados/niquelandia.nc saida/niquelandia
-python -m codecraft rgb saida/niquelandia.hdr saida/niquelandia_rgb.png
-python -m codecraft anomalias saida/emas.hdr saida/niquelandia.hdr saida/anomalias.tif saida/anomalias.png --epocas 50 --semente 42
-python -m codecraft refinar saida/niquelandia.hdr saida/anomalias.tif saida/anomalias_refinado.png
+python -m anna converter dados/emas.nc saida/emas
+python -m anna converter dados/niquelandia.nc saida/niquelandia
+python -m anna rgb saida/niquelandia.hdr saida/niquelandia_rgb.png
+python -m anna anomalias saida/emas.hdr saida/niquelandia.hdr saida/anomalias.tif saida/anomalias.png --epocas 50 --semente 42
+python -m anna refinar saida/niquelandia.hdr saida/anomalias.tif saida/anomalias_refinado.png
 ```
 
-Use `python -m codecraft <comando> --help` para ver as opções. O TensorFlow só é carregado no comando
+Use `python -m anna <comando> --help` para ver as opções. O TensorFlow só é carregado no comando
 `anomalias`.
 
 ### Testes
@@ -82,7 +82,7 @@ onde o TensorFlow estiver instalado; sem ele, é pulado automaticamente (inclusi
 ## Estrutura
 
 ```text
-codecraft/
+anna/
   conversao.py      NetCDF EMIT → ENVI
   rgb.py            composição RGB com realce de contraste
   anomalias.py      autoencoder e mapa de erro de reconstrução

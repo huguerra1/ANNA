@@ -1,1 +1,1 @@
-"""Testes sintéticos do pacote codecraft."""
+"""Testes sintéticos do pacote anna."""

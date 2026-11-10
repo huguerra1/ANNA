@@ -20,4 +20,4 @@ jobs:
       # Os testes não usam o TensorFlow (só o comando `anomalias` usa), então ele fica de fora aqui.
       - run: pip install numpy xarray netCDF4 spectral rasterio scikit-learn matplotlib
       - run: python -m unittest discover -s tests -v
-      - run: python -m codecraft --help
+      - run: python -m anna --help
