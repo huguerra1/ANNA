@@ -12,6 +12,16 @@ from tests.temporarios import diretorio_temporario
 
 
 class TestCLI(unittest.TestCase):
+    def test_ajuda_anomalias_mostra_opcoes_do_treino(self):
+        resultado = subprocess.run(
+            [sys.executable, "-m", "codecraft", "anomalias", "--help"],
+            capture_output=True, text=True,
+            cwd=Path(__file__).resolve().parents[1],
+        )
+        self.assertEqual(resultado.returncode, 0, resultado.stderr)
+        self.assertIn("--epocas", resultado.stdout)
+        self.assertIn("--semente", resultado.stdout)
+
     def test_padroes_do_treino(self):
         args = criar_parser().parse_args(["anomalias", "treino.hdr", "analise.hdr", "erro.tif", "erro.png"])
         self.assertEqual(args.epocas, 50)
