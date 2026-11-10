@@ -74,8 +74,10 @@ python -m unittest discover -s tests -v
 ```
 
 Os testes usam dados sintéticos pequenos: escolha de bandas, máscara de pixels válidos, normalização
-por percentil, NDWI, cabeçalho ENVI e conversão de um NetCDF sintético. O treino do autoencoder não é
-testado.
+por percentil, NDWI, cabeçalho ENVI, conversão de um NetCDF sintético e ajuda da CLI. O teste de ponta
+a ponta do treino e da detecção usa dois cubos ENVI de 12×12 pixels e 20 bandas, com três épocas e
+semente fixa, e verifica os mapas gerados e o erro maior na região anômala. Esse teste roda somente
+onde o TensorFlow estiver instalado; sem ele, é pulado automaticamente (inclusive no CI).
 
 ## Estrutura
 
