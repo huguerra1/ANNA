@@ -1,5 +1,7 @@
 # CodeCraft — Anomalias ambientais em imagens hiperespectrais da NASA
 
+[![CI](https://github.com/huguerra1/codecraft/actions/workflows/ci.yml/badge.svg)](https://github.com/huguerra1/codecraft/actions/workflows/ci.yml)
+
 Projeto desenvolvido em equipe num hackathon (outubro de 2025). Ele detecta **anomalias ambientais**,
 como áreas de mineração e solo exposto, em imagens do espectrômetro **NASA EMIT**, instalado na
 Estação Espacial Internacional. Para isso, usa um **autoencoder** treinado só com a vegetação de uma
