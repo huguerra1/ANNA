@@ -1,0 +1,8 @@
+numpy
+xarray
+netCDF4
+spectral
+rasterio
+scikit-learn
+matplotlib
+tensorflow
