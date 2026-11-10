@@ -4,12 +4,12 @@ import unittest
 
 import numpy as np
 
-from codecraft.processamento import (
+from anna.processamento import (
     encontrar_banda_mais_proxima,
     mascara_pixels_validos,
     normalizar_por_percentil,
 )
-from codecraft.rgb import compor_rgb
+from anna.rgb import compor_rgb
 
 
 class TestBandaMaisProxima(unittest.TestCase):

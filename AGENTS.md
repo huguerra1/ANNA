@@ -1,4 +1,4 @@
-# Regras do projeto CodeCraft
+# Regras do projeto ANNA
 
 Instruções para agentes de código (Claude Code, Codex, Gemini, Kiro). `CLAUDE.md` aponta para este arquivo.
 
@@ -8,7 +8,7 @@ preservada. Veja o README.
 
 ## Comandos
 - `python -m unittest discover -s tests -v`: testes (não precisam do TensorFlow).
-- `python -m codecraft --help`: linha de comando.
+- `python -m anna --help`: linha de comando.
 
 ## Regras
 1. Não altere os algoritmos nem os parâmetros que geraram os resultados do README sem registrar a mudança.

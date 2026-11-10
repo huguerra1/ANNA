@@ -6,7 +6,7 @@ import unittest
 
 import numpy as np
 
-from codecraft.anomalias import treinar_e_detectar_anomalias
+from anna.anomalias import treinar_e_detectar_anomalias
 from tests.temporarios import diretorio_temporario
 
 
