@@ -4,7 +4,7 @@ import unittest
 
 import numpy as np
 
-from codecraft.refinamento import calcular_ndwi, criar_mascara_agua, refinar_contraste
+from anna.refinamento import calcular_ndwi, criar_mascara_agua, refinar_contraste
 
 
 class TestNDWI(unittest.TestCase):

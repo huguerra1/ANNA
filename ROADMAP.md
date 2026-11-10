@@ -1,9 +1,9 @@
-# ROADMAP — CodeCraft
+# ROADMAP — ANNA
 
 **Status:** PRONTO PARA REVISÃO · Projeto de hackathon restaurado em 10/11/2026
 
 ## Checklist de "pronto"
-- [x] Código organizado em pacote com linha de comando (`python -m codecraft`)
+- [x] Código organizado em pacote com linha de comando (`python -m anna`)
 - [x] Testes com dados sintéticos (28; treino opcional com TensorFlow) e CI verde
 - [x] README com contexto, diagrama do pipeline, resultados e como obter os dados da NASA
 - [x] Dados brutos (12 GB) fora do repositório
@@ -19,5 +19,6 @@
    e semente fixa; verifica TIF, PNG e erro maior na anomalia. Pula automaticamente sem TensorFlow.
 
 ## Log
-- 2026-11-10 — Projeto encontrado em `OneDrive\Documentos\codecraft`; código original publicado na `main`;
+- 2026-11-10 — Projeto encontrado em `OneDrive\Documentos\codecraft` (nome antigo); código original publicado na `main`;
   refatoração em pacote, testes, CI e README na `dev`.
+- 2026-11-10 — Projeto renomeado de CodeCraft para ANNA (repositório, pacote `anna` e linha de comando `python -m anna`).
